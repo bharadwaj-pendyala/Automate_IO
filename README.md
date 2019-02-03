@@ -14,7 +14,7 @@ git clone <URL>
 
 Make sure dependencies are resolved without any error.
 
-##Test Cases Present
+## Test Cases Present
 
 While trying to run registration test case don't forget to change test data in excel sheet specified.
 If you want to verify the execution without any data change prefer to run Login Test Case.
