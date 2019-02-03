@@ -1,0 +1,13 @@
+
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+target/test-classes/com/TestCases/TestCase_Registration.class
+target/test-classes/com/TestCases/TestCase_Login.class
+target/classes/libs/chromedriver.exe
+target/classes/com/Utilities/TestData.xlsx
+target/classes/com/Utilities/GlobalSettings.properties
+target/classes/com/Utilities/ExcelReader.class
+target/classes/com/PageObjects/Automate_IO_HomePage.class
+target/classes/com/Allocator/Allocator.class
