@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "9755f4db-d2da-41ee-9a75-6f78c3ba1c70",
+		"name": "Automate_IO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC_01_Endpoint check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a5187ea5-16f2-4055-8145-f797723a8c00",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body('{\"data\":\"Hello from Automate\"}');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.automate.io/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"automate",
+						"io"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Endpoint check"
+			},
+			"response": [
+				{
+					"name": "https://api.automate.io/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.automate.io/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"automate",
+								"io"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Feb 2019 14:08:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-sMGK1H0FnaB0FXJGY/uNUf5wTD0\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Hello from Automate\"\n}"
+				}
+			]
+		},
+		{
+			"name": "TC_02_/app",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a9f5ccf-8c28-4cc1-89ec-9199e975fbaa",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://automate.io/app/",
+					"protocol": "https",
+					"host": [
+						"automate",
+						"io"
+					],
+					"path": [
+						"app",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_03_/register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7345740b-056f-46ae-9930-962ad1790899",
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"newsletter\":true,\"email\":\"sample22222@gmail.com\",\"name\":\"Sample22222\",\"password\":\"Sample@123\"}"
+				},
+				"url": {
+					"raw": "https://api.automate.io/auth/register",
+					"protocol": "https",
+					"host": [
+						"api",
+						"automate",
+						"io"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_04_/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"ray123456@gmail.com\",\"password\":\"Ecli@123\"}"
+				},
+				"url": {
+					"raw": "https://api.automate.io/auth/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"automate",
+						"io"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_05_/forgotPassword",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6d552de8-9a16-435b-afc0-9904ba1db9fa",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"ray123456@gmail.com\"}"
+				},
+				"url": {
+					"raw": "https://api.automate.io/auth/forgotPassword",
+					"protocol": "https",
+					"host": [
+						"api",
+						"automate",
+						"io"
+					],
+					"path": [
+						"auth",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

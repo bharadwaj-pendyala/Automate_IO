@@ -1,0 +1,330 @@
+{
+	"id": "d3ccf819-f12c-4fff-9751-e348a74d5460",
+	"name": "Automate_IO",
+	"allTests": [],
+	"timestamp": "2019-02-07T14:34:32.567Z",
+	"collection_id": "9755f4db-d2da-41ee-9a75-6f78c3ba1c70",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "9755f4db-d2da-41ee-9a75-6f78c3ba1c70",
+		"name": "Automate_IO",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"e3a38fd4-44ca-4f70-89cc-78d7e8b8ecca",
+			"a9966ca0-26ce-4425-ad54-038c106a15a6",
+			"93d13d93-9e90-41c5-96f3-3313bcdcadff",
+			"b1a910fc-b90f-418e-add5-b82b8231815a",
+			"7e7551da-e326-472c-a59c-c2a9a6f9cd86"
+		],
+		"folders_order": [],
+		"owner": "1000487",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "TC_01_Endpoint check",
+			"id": "e3a38fd4-44ca-4f70-89cc-78d7e8b8ecca",
+			"url": "https://api.automate.io/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Status code is 200",
+				"status": "pass",
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"1213"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			],
+			"time": "1213",
+			"totalRequestTime": "1213",
+			"iterationResults": {}
+		},
+		{
+			"name": "TC_02_/app",
+			"id": "a9966ca0-26ce-4425-ad54-038c106a15a6",
+			"url": "https://automate.io/app/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Status code is 200",
+				"status": "pass",
+				"Response time is less than 500ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"1090"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": false
+				}
+			],
+			"time": "1090",
+			"totalRequestTime": "1090",
+			"iterationResults": {}
+		},
+		{
+			"name": "TC_03_/register",
+			"id": "93d13d93-9e90-41c5-96f3-3313bcdcadff",
+			"url": "https://api.automate.io/auth/register",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": {
+					"actual": 884,
+					"expected": 500,
+					"message": "expected 884 to be below 500",
+					"name": "AssertionError",
+					"showDiff": true,
+					"stack": "AssertionError: expected 884 to be below 500\n    at eval (eval at exec (evalmachine.<anonymous>:12494:2548), <anonymous>:5:47)\n    at Postman.n.test (evalmachine.<anonymous>:75:212)\n    at Object.eval (eval at exec (evalmachine.<anonymous>:12494:2548), <anonymous>:4:4)\n    at Uniscope.exec (evalmachine.<anonymous>:12494:2583)\n    at module.exports (evalmachine.<anonymous>:63:538)\n    at Object.<anonymous> (evalmachine.<anonymous>:66:1694)\n    at evalmachine.<anonymous>:16:26\n    at Array.forEach (<anonymous>)\n    at Object.emit (evalmachine.<anonymous>:15:54)\n    at evalmachine.<anonymous>:52:24"
+				},
+				"name": "Response time is less than 500ms",
+				"status": "fail",
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 500ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"884"
+			],
+			"allTests": [
+				{
+					"Response time is less than 500ms": false,
+					"Status code is 200": true
+				}
+			],
+			"time": "884",
+			"totalRequestTime": "884",
+			"iterationResults": {}
+		},
+		{
+			"name": "TC_04_/login",
+			"id": "b1a910fc-b90f-418e-add5-b82b8231815a",
+			"url": "https://api.automate.io/auth/login",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {},
+			"times": [
+				"432"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "432",
+			"totalRequestTime": "432",
+			"iterationResults": {}
+		},
+		{
+			"name": "TC_05_/forgotPassword",
+			"id": "7e7551da-e326-472c-a59c-c2a9a6f9cd86",
+			"url": "https://api.automate.io/auth/forgotPassword",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {},
+			"times": [
+				"787"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "787",
+			"totalRequestTime": "787",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 4,
+	"totalFail": 2,
+	"totalTime": 4406,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "TC_01_Endpoint check",
+			"id": "e3a38fd4-44ca-4f70-89cc-78d7e8b8ecca",
+			"url": "https://api.automate.io/",
+			"time": "2019-02-07T14:34:32.567Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TC_02_/app",
+			"id": "a9966ca0-26ce-4425-ad54-038c106a15a6",
+			"url": "https://automate.io/app/",
+			"time": "2019-02-07T14:34:32.567Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "TC_03_/register",
+			"id": "93d13d93-9e90-41c5-96f3-3313bcdcadff",
+			"url": "https://api.automate.io/auth/register",
+			"time": "2019-02-07T14:34:32.567Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Response time is less than 500ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TC_04_/login",
+			"id": "b1a910fc-b90f-418e-add5-b82b8231815a",
+			"url": "https://api.automate.io/auth/login",
+			"time": "2019-02-07T14:34:32.567Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "TC_05_/forgotPassword",
+			"id": "7e7551da-e326-472c-a59c-c2a9a6f9cd86",
+			"url": "https://api.automate.io/auth/forgotPassword",
+			"time": "2019-02-07T14:34:32.567Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}
